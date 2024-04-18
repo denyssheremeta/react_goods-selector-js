@@ -39,7 +39,7 @@ export const App = () => {
         <h1 className="title is-flex is-align-items-center">
           {selectedGood} is selected
           <button
-            onClick={() => setSelectedGood('')}
+            onClick={() => setSelectedGood(null)}
             data-cy="ClearButton"
             type="button"
             className="delete ml-3"
@@ -64,11 +64,11 @@ export const App = () => {
               <td>
                 <GoodsButton
                   onClick={() =>
-                    setSelectedGood(isGoodSelected(good) ? '' : good)
+                    setSelectedGood(isGoodSelected(good) ? null : good)
                   }
                   selected={isGoodSelected(good)}
                   text={isGoodSelected(good) ? '-' : '+'}
-                  type={isGoodSelected(good) ? 'is-info' : ''}
+                  type={isGoodSelected(good) ? 'is-info' : null}
                 />
               </td>
 
